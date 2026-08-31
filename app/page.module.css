@@ -1,0 +1,420 @@
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  border: 4px solid var(--shadow);
+  background: #fffaf0;
+  box-shadow: 8px 8px 0 var(--shadow);
+}
+
+.brand {
+  display: flex;
+  align-items: end;
+  gap: 6px;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.brand small {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  padding: 4px 7px;
+  border: 3px solid var(--shadow);
+  background: var(--accent);
+  transform: translateY(-10px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 3px solid var(--shadow);
+  box-shadow: 4px 4px 0 var(--shadow);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.secondary {
+  background: #fff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 32px;
+  padding: 30px 0 10px;
+}
+
+.heroText,
+.heroCard,
+.projectCard,
+.techCard,
+.contactBox {
+  border: 4px solid var(--shadow);
+  background: var(--panel);
+  box-shadow: 10px 10px 0 var(--shadow);
+}
+
+.heroText {
+  padding: 36px 30px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 12px;
+  border: 3px solid var(--shadow);
+  background: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.heroText h1 {
+  max-width: 620px;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+}
+
+.heroText h1 span {
+  color: var(--primary);
+}
+
+.lead {
+  margin-top: 22px;
+  max-width: 600px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.heroCard {
+  padding: 20px 18px;
+  background: #fff;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #ebffd8;
+  border: 3px solid var(--shadow);
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2ec96b;
+  border: 2px solid var(--shadow);
+}
+
+.metrics {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.metrics div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 16px;
+  border: 3px solid var(--shadow);
+  background: #f4f4f4;
+}
+
+.metrics strong {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.metrics span {
+  font-weight: 700;
+  color: rgba(17, 17, 17, 0.74);
+}
+
+.section {
+  margin-top: 52px;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.06em;
+}
+
+.projectGrid,
+.techGrid {
+  display: grid;
+  gap: 22px;
+}
+
+.projectGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px 20px 18px;
+  background: linear-gradient(135deg, #fffef9 0%, #ffedd9 100%);
+}
+
+.projectTag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 7px 10px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 3px solid var(--shadow);
+}
+
+.projectCard h3 {
+  font-size: 1.8rem;
+  letter-spacing: -0.05em;
+}
+
+.projectCard p {
+  line-height: 1.7;
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.projectCard a {
+  margin-top: auto;
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 14px;
+  background: var(--accent);
+  border: 3px solid var(--shadow);
+  font-weight: 800;
+}
+
+.techGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.techCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 16px;
+  background: #fff;
+  min-height: 180px;
+}
+
+.techImageWrap {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border: 3px solid var(--shadow);
+  background: #fff9e8;
+  padding: 10px;
+}
+
+.techImageWrap img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.techFallback {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.projectImageWrap {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border: 3px solid var(--shadow);
+  background: #fff;
+}
+
+.projectImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.techCard span {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.contactBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 26px;
+  background: linear-gradient(135deg, #ffe5b8 0%, #f9f5ff 100%);
+}
+
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-weight: 800;
+}
+
+.contactList a {
+  padding: 10px 16px;
+  border: 3px solid var(--shadow);
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contactBox,
+  .header,
+  .hero {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 18px, 1180px);
+    padding-top: 18px;
+  }
+
+  .header,
+  .heroText,
+  .projectCard,
+  .techCard,
+  .contactBox {
+    box-shadow: 6px 6px 0 var(--shadow);
+  }
+
+  .header {
+    padding: 14px 16px;
+  }
+
+  .nav {
+    gap: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .heroText {
+    padding: 22px 16px;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactBox {
+    padding: 22px 18px;
+  }
+}
