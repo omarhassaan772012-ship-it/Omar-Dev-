@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import ContactForm from "@/components/Contact"
 import htmlLogo from "../imgs/Html.png";
 import cssLogo from "../imgs/css.png";
 import jsLogo from "../imgs/JavaScript.png";
@@ -174,6 +175,29 @@ export default async function Home() {
             <h2>Contact</h2>
           </div>
 
+          <form action="https://formspree.io/f/maqrndap" method="POST" className={styles.form}>
+  <div className={styles.inputRow}>
+    <div className={styles.inputGroup}>
+      <label>Full Name</label>
+      <input type="text" name="name" required />
+    </div>
+    <div className={styles.inputGroup}>
+      <label>Email Address</label>
+      <input type="email" name="email" required />
+    </div>
+  </div>
+
+  <div className={styles.inputGroup}>
+    <label>Your Message</label>
+    <textarea rows={4} name="message" required></textarea>
+  </div>
+
+  <div className={styles.buttonGroup}>
+    <button type="submit" className={styles.submitBtn}>SEND MESSAGE</button>
+    <button type="button" className={styles.cancelBtn}>CANCEL</button>
+  </div>
+</form>
+
           <div className={styles.contactList}>
             {contact.email ? <a href={`mailto:${contact.email}`}>{contact.email}</a> : null}
             {contact.github ? (
@@ -189,6 +213,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+
     </main>
   );
 }

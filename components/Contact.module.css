@@ -1,0 +1,188 @@
+.section {
+  background-color: #f4efdf;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: inherit;
+  color: #000;
+}
+
+.contactBox {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* الكروت الأساسية */
+.mainFormCard {
+  flex: 3;
+  background-color: #f9f6ed;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px #000;
+  padding: 32px;
+}
+
+.sidebarCard {
+  flex: 1.2;
+  align-self: flex-start;
+  background-color: #f9f6ed;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px #000;
+  padding: 16px;
+}
+
+/* النصوص والعناوين */
+.eyebrow {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* عناصر الإدخال (Inputs) */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputRow {
+  display: flex;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  background: #f9f6ed;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  padding: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* الأزرار */
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.submitBtn,
+.cancelBtn {
+  font-weight: 800;
+  font-size: 13px;
+  padding: 12px 24px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.submitBtn {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.cancelBtn {
+  background-color: #fff;
+  color: #000;
+}
+
+.submitBtn:active,
+.cancelBtn:active {
+  box-shadow: 0px 0px 0px #000;
+  transform: translate(4px, 4px);
+}
+
+/* الجزء الأيمن للروابط */
+.sidebarHeader {
+  border: 2px solid #000;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  background-color: #eee9da;
+  margin-bottom: 20px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.contactItem h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contactItem p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #555;
+  word-break: break-all;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactBox {
+    flex-direction: column;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
