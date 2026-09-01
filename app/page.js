@@ -125,7 +125,7 @@ export default async function Home() {
 
       <section id="projects" className={styles.section}>
         <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>Selected work</p>
+          <p className={styles.eyebrow}>Work sample</p>
           <h2>Projects</h2>
         </div>
 
